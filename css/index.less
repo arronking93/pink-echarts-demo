@@ -10,3 +10,112 @@
   height: 1rem;
   background-color: pink;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(../images/bg.jpg) no-repeat top center;
+  // background-size: cover;
+  line-height: 1.15;
+  header {
+    height: 1.25rem;
+    background: url(../images/head_bg.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+    h1 {
+      color: #fff;
+      font-size: .475rem;
+      text-align: center;
+      line-height: 1rem;
+    }
+
+    .showTime {
+      position: absolute;
+      top: 0;
+      right: .375rem;
+      line-height: .9375rem;
+      font-size: .25rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  .mainbox {
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 300px;
+    padding: .125rem .125rem 0;
+    display: flex;
+    .column {
+      flex: 3;
+      &:nth-child(2) {
+        flex: 5;
+      }
+      .panel {
+        height: 3.875rem;
+        border: 1px solid rgba(25, 186, 139, 0.17);
+        background: url('../images/line(1).png') rgba(255, 255, 255, 0.03) no-repeat;
+        padding: 0 .1875rem .5rem;
+        margin-bottom: .1875rem;
+        position: relative;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: .125rem;
+          height: .125rem;
+          border-top: 2px solid #02a6b5;
+        }
+        &::before {
+          left: 0;
+          border-left: 2px solid #02a6b5;
+        }
+        &::after {
+          right: 0;
+          border-right: 2px solid #02a6b5;
+        }
+        .panel-footer {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: .125rem;
+            height: .125rem;
+            border-bottom: 2px solid #02a6b5;
+          }
+
+          &::before {
+            left: 0;
+            border-left: 2px solid #02a6b5;
+          }
+
+          &::after {
+            right: 0;
+            border-right: 2px solid #02a6b5;
+          }
+        }
+        h2 {
+          height: .6rem;
+          line-height: .6rem;
+          color: #fff;
+          font-size: .25rem;
+          text-align: center;
+          font-weight: 400;
+        }
+        .chart {
+          height: 3rem;
+          background-color: pink;
+        }
+      }
+    }
+  }
+}
+
+
