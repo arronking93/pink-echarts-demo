@@ -213,7 +213,7 @@ body .mainbox .column .panel h2 {
 }
 body .mainbox .column .panel .chart {
   height: 3rem;
-  background-color: pink;
+  /* background-color: pink; */
 }
 @font-face {
   font-family: 'electronicFont';
