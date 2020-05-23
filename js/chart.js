@@ -273,6 +273,15 @@
   window.addEventListener('resize', () => {
     myChart.resize()
   })
+
+  // 年份切换
+  $('.line1 h2').on('click', 'a', function() {
+    // console.log($(this).index())
+    const curIndex = $(this).index()
+    options.series[0].data = yearData[curIndex].data[0]
+    options.series[1].data = yearData[curIndex].data[1]
+    myChart.setOption(options)
+  })
 })()
 ;(function () {
   // 右边折线图
