@@ -119,6 +119,9 @@ body .mainbox .column:nth-child(2) .map {
   height: 10.125rem;
   position: relative;
 }
+body .mainbox .column:nth-child(2) .map .chart {
+  height: 100%;
+}
 body .mainbox .column:nth-child(2) .map .map1 {
   width: 6.475rem;
   height: 6.475rem;
@@ -235,5 +238,15 @@ body .mainbox .column .panel .chart {
   }
   to {
     transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
   }
 }

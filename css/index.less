@@ -124,6 +124,10 @@ body {
         .map {
           height: 10.125rem;
           position: relative;
+          .chart {
+            height: 100%;
+            // background-color: pink;
+          }
           .map1 {
             width: 6.475rem;
             height: 6.475rem;
@@ -252,6 +256,18 @@ body {
 
   to {
     transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
   }
 }
 

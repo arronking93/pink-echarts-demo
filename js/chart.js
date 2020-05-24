@@ -526,7 +526,46 @@
 ;(function () {
   // 左边饼状图
   let myChart = echarts.init(document.querySelector('.pie1 .chart'))
-  let options = {}
+  let options = {
+    color: ['#065aab', '#066eab', '#0682ab', '#0696ab', '#06a0ab'],
+    tooltip: {
+      trigger: 'item',
+      formatter: '{a} <br/>{b}: {c} ({d}%)',
+    },
+    legend: {
+      bottom: '0%',
+      itemWidth: 10,
+      itemHeight: 10,
+      textStyle: {
+        color: 'rgba(255,255,255,.5)',
+        fontSize: '12',
+      },
+    },
+    series: [
+      {
+        name: '年龄分布',
+        type: 'pie',
+        center: ['50%', '40%'],
+        radius: ['40%', '60%'],
+        avoidLabelOverlap: false,
+        label: {
+          show: false,
+          position: 'center',
+        },
+        labelLine: {
+          show: false,
+        },
+        data: [
+          { value: 1, name: '20岁以下' },
+          { value: 4, name: '20-29岁' },
+          { value: 2, name: '30-39岁' },
+          { value: 2, name: '40-49岁' },
+          { value: 1, name: '50岁以上' },
+        ],
+      },
+    ],
+  }
+
   myChart.setOption(options)
   window.addEventListener('resize', () => {
     myChart.resize()
@@ -535,7 +574,57 @@
 ;(function () {
   // 右边饼状图
   let myChart = echarts.init(document.querySelector('.pie2 .chart'))
-  let options = {}
+  let options = {
+    color: [
+      '#006cff',
+      '#60cda0',
+      '#ed8884',
+      '#ff9f7f',
+      '#0096ff',
+      '#9fe6b8',
+      '#32c5e9',
+      '#1d9dff',
+    ],
+    tooltip: {
+      trigger: 'item',
+      formatter: '{a} <br/>{b} : {c} ({d}%)',
+    },
+    legend: {
+      top: '90%',
+      itemWidth: 10,
+      itemHeight: 10,
+      textStyle: {
+        color: 'rgba(255,255,255,.5)',
+        fontSize: '12',
+      },
+    },
+    series: [
+      {
+        name: '半径模式',
+        type: 'pie',
+        radius: ['10%', '70%'],
+        center: ['50%', '42%'],
+        roseType: 'radius',
+        label: {
+          fontSize: 10,
+        },
+        labelLine: {
+          length: 6,
+          length2: 8,
+        },
+        data: [
+          { value: 20, name: '云南' },
+          { value: 26, name: '北京' },
+          { value: 24, name: '山东' },
+          { value: 25, name: '河北' },
+          { value: 20, name: '江苏' },
+          { value: 25, name: '浙江' },
+          { value: 30, name: '四川' },
+          { value: 42, name: '湖北' },
+        ],
+      },
+    ],
+  }
   myChart.setOption(options)
   window.addEventListener('resize', () => {
     myChart.resize()
